@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Message for You</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #ffe6f0;
+      padding: 50px;
+    }
+
+    .wrapper {
+      max-width: 400px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .question {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .gif {
+      width: 250px;
+      margin-bottom: 20px;
+    }
+
+    .btn-group button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 0 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .yes-btn {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    .no-btn {
+      background-color: #ccc;
+      color: black;
+    }
+
+    #result-img {
+      max-width: 100%;
+      display: none;
+      margin-top: 20px;
+    }
+
+    #result-text {
+      font-size: 18px;
+      color: #ff4081;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2 class="question">You love me, bae??</h2>
+
+    <img class="gif" alt="gif"
+      src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gifyou.webp">
+
+    <div class="btn-group">
+      <button class="yes-btn">Yes</button>
+      <button class="no-btn">No</button>
+    </div>
+
+    <div class="result">
+      <img id="result-img" src="" alt="">
+      <p id="result-text"></p>
+    </div>
+  </div>
+
+  <script>
+    const yesBtn = document.querySelector(".yes-btn");
+    const noBtn = document.querySelector(".no-btn");
+    const resultImg = document.getElementById("result-img");
+    const resultText = document.getElementById("result-text");
+
+    yesBtn.addEventListener("click", () => {
+      resultImg.src = "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gif.webp";
+      resultImg.style.display = "block";
+      resultText.innerText = "Yay! I love You Too Bae~ 💕";
+      resultText.style.display = "block";
+    });
+
+    noBtn.addEventListener("click", () => {
+      resultImg.src = "https://i.imgur.com/4P9WfRv.png";
+      resultImg.style.display = "block";
+      resultText.innerText = "Aww :( i'm so sad💔...";
+      resultText.style.display = "block";
+    });
+  </script>
+</body>
+</html>
